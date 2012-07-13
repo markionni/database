@@ -10,3 +10,15 @@ INSERT INTO gameobject (guid,id, map, spawnMask, position_x ,position_y, positio
 
 -- Pet Trainer Fix (Sanctum)
 UPDATE creature_template SET trainer_class=3 WHERE entry=16675;
+
+-- Quest 411
+UPDATE db_script_string SET entry=2000000210 WHERE entry=2000000090;
+UPDATE db_script_string SET entry=2000000211 WHERE entry=2000000091;
+
+DELETE FROM quest_end_scripts WHERE id=411;
+INSERT INTO quest_end_scripts VALUES
+(411,2,15,7673,0,0,0,4,'0','0','0','0',0,0,0,0,'Bethor use Nether Gem'),
+(411,7,10,5666,23000,0,0,0,'0','0','0','0',1768.58,55.4891,-46.3198,2.28248,'Summon Visage'),
+(411,23,0,0,0,5666,10,0,'2000000210','0','0','0',0,0,0,0,'Visage Say 3'),
+(411,23,1,2,0,5666,10,0,'0','0','0','0',0,0,0,0,''),
+(411,30,0,0,0,1498,10,0,'2000000211','0','0','0',0,0,0,0,'Bethor Say');
