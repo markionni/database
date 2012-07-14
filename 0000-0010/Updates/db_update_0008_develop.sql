@@ -1,0 +1,1 @@
+-- ALTER TABLE db_update_version CHANGE COLUMN db_update_version_0007 db_update_version_0008 bit;

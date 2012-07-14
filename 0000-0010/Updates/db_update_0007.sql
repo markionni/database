@@ -1,4 +1,4 @@
--- ALTER TABLE db_update_version CHANGE COLUMN db_update_version_0006 db_update_version_0007 bit;
+ALTER TABLE db_update_version CHANGE COLUMN db_update_version_0006 db_update_version_0007 bit;
 
 -- Missing Shattrath Guild Banks (Sanctum)
 DELETE FROM gameobject WHERE id IN (188126,188127);
@@ -90,7 +90,7 @@ DELETE FROM creature WHERE guid=86514;
 UPDATE creature_template SET MovementType=0 WHERE entry=17426;
 
 -- NPC Galaen's Corpse - Permanent Feign Death
-UPDATE creature_template_addon SET auras=29266 WHERE entry 17508;
+UPDATE creature_template_addon SET auras=29266 WHERE entry=17508;
 
 -- NPC Funaam
 UPDATE creature_template SET gossip_menu_id=7484 WHERE entry=16734;
@@ -99,3 +99,17 @@ DELETE FROM gossip_menu_option WHERE menu_id=7484;
 INSERT INTO gossip_menu_option (menu_id,id,option_icon,option_text,option_id,npc_option_npcflag,action_menu_id,action_poi_id,action_script_id,box_coded,box_money,box_text,cond_1,cond_1_val_1,cond_1_val_2,cond_2,cond_2_val_1,cond_2_val_2,cond_3,cond_3_val_1,cond_3_val_2) VALUES
 (7484,0,7,'How do I form a guild?',10,262144,0,0,0,0,0,'',0,0,0,0,0,0,0,0,0),
 (7484,1,8,'I want to create a guild crest.',11,524288,0,0,0,0,0,'',0,0,0,0,0,0,0,0,0);
+
+-- ------------------------------------ --
+--             Scriptdev2               --
+-- ------------------------------------ --
+
+-- r2551
+UPDATE creature_template SET ScriptName='npc_kagani_nightstrike' WHERE entry=24557;
+UPDATE creature_template SET ScriptName='npc_ellris_duskhallow' WHERE entry=24558;
+UPDATE creature_template SET ScriptName='npc_eramas_brightblaze' WHERE entry=24554;
+UPDATE creature_template SET ScriptName='npc_yazzai' WHERE entry=24561;
+UPDATE creature_template SET ScriptName='npc_warlord_salaris' WHERE entry=24559;
+UPDATE creature_template SET ScriptName='npc_garaxxas' WHERE entry=24555;
+UPDATE creature_template SET ScriptName='npc_apoko' WHERE entry=24553;
+UPDATE creature_template SET ScriptName='npc_zelfan' WHERE entry=24556;
