@@ -10,8 +10,16 @@ INSERT INTO spell_script_target VALUES
 (32111,1,17946);
 
 -- ------------------------------------ --
+--              Zul'Aman                --
+-- ------------------------------------ --
+
+-- Fix Nalorakk Event
+UPDATE creature_template SET unit_flags=33600 WHERE entry=23576;
+
+-- ------------------------------------ --
 --             Scriptdev2               --
 -- ------------------------------------ --
 
+-- r2561
 UPDATE creature_template SET ScriptName='' WHERE entry=18095;
 UPDATE creature_template SET ScriptName='npc_doomfire_spirit' WHERE entry=18104;
