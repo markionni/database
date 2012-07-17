@@ -14,7 +14,7 @@ INSERT INTO spell_script_target VALUES
 -- ------------------------------------ --
 
 -- Fix Nalorakk Event
-UPDATE creature_template SET unit_flags=33600 WHERE entry=23576;
+UPDATE creature_template SET unit_flags=unit_flags|33600 WHERE entry=23576;
 
 -- ------------------------------------ --
 --             Scriptdev2               --
