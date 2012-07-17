@@ -2,8 +2,8 @@
 
 -- Archimonde - Mount Hyjal (Xfurry)
 DELETE FROM creature WHERE id IN (22418,17968);
-INSERT INTO creature (id,map,spawnMask,modelid,equipment_id,position_x,position_y,position_z,orientation,spawntimesecs,spawndist,currentwaypoint,curhealth,curmana,DeathState,MovementType) VALUES
-(22418,534,1,18783,0,5503.713,-3523.436,1608.781,0.0,604800,0,0,7588,0,0,0);
+INSERT INTO creature (guid,id,map,spawnMask,modelid,equipment_id,position_x,position_y,position_z,orientation,spawntimesecs,spawndist,currentwaypoint,curhealth,curmana,DeathState,MovementType) VALUES
+(99644,22418,534,1,18783,0,5503.713,-3523.436,1608.781,0.0,604800,0,0,7588,0,0,0);
 
 DELETE FROM spell_script_target WHERE entry=32111;
 INSERT INTO spell_script_target VALUES
